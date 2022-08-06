@@ -15,8 +15,8 @@ services:
       clickhouse-network:
         ipv4_address: 172.23.0.11
     ports:
-      - "127.0.0.1:8123:8123"
-      - "127.0.0.1:9000:9000"
+      - "0.0.0.0:8123:8123"
+      - "0.0.0.0:9000:9000"
     volumes:
       - ${PWD}/clickhouse01:/etc/clickhouse-server
     depends_on:
@@ -28,6 +28,9 @@ services:
     networks:
       clickhouse-network:
         ipv4_address: 172.23.0.12
+    ports:
+      - "0.0.0.0:18123:8123"
+      - "0.0.0.0:19000:9000"
     volumes:
       - ${PWD}/clickhouse02:/etc/clickhouse-server
     depends_on:
@@ -39,6 +42,9 @@ services:
     networks:
       clickhouse-network:
         ipv4_address: 172.23.0.13
+    ports:
+      - "0.0.0.0:28123:8123"
+      - "0.0.0.0:29000:9000"
     volumes:
       - ${PWD}/clickhouse03:/etc/clickhouse-server
     depends_on:
