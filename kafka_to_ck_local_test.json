@@ -6,7 +6,7 @@
                     "parameter":{
                         "topic":"topic.out.product-fund",
                         "mode": "earliest-offset",
-                        "groupId":"xb-test-product-fund-17",
+                        "groupId":"xb-test-product-fund-21",
                         "codec":"json",
                         "column":[
                             {
@@ -164,7 +164,7 @@
                             }
                         ],
                         "consumerSettings":{
-                            "bootstrap.servers":"192.168.13.36:9092,192.168.13.37:9092,192.168.13.38:9092",
+                            "bootstrap.servers":"127.0.0.1:9092",
                             "auto.commit.enable":"false"
                         }
                     },
