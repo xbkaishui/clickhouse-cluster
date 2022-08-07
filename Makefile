@@ -15,6 +15,10 @@ config:
 up:
 	docker-compose up -d
 
+.PHONY: kaf-up
+kaf-up:
+	docker-compose -f kafka-docker-compose.yml up -d
+
 .PHONY: start
 start:
 	docker-compose start
@@ -22,3 +26,7 @@ start:
 .PHONY: down
 down:
 	docker-compose down
+
+.PHONY: kaf-down
+kaf-down:
+	docker-compose  -f kafka-docker-compose.yml down
